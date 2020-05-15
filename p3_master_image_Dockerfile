@@ -4,7 +4,7 @@
  
 # The line below states we will base our new image on the Latest Official Ubuntu 
 # Remove py3 for python 2 image
-FROM tensorflow/tensorflow:1.12.0-gpu-py3
+FROM tensorflow/tensorflow:1.13.1-gpu-py3
 #ENV http_proxy http://172.16.117.121:3128
 #ENV https_proxy http://172.16.117.121:3128
 
@@ -28,7 +28,7 @@ RUN pip3 --no-cache-dir install ipython pandas numpy jupyter cmake
 
 RUN pip3 --no-cache-dir install docopt joblib natsort scipy 
 
-#RUN pip3 --no-cache-dir install tqdm matplotlib librosa scikit-learn
+RUN pip3 --no-cache-dir install tqdm matplotlib librosa scikit-learn
 
 RUN pip3 --no-cache-dir install h5py imageio opencv-python Pillow 
 
